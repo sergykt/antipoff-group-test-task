@@ -1,0 +1,27 @@
+:root {
+  // FONT SIZES
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-xl: 36px;
+  --font-size-xxl: 64px;
+
+  // COLORS
+  --black: #151317;
+  --violet: #512689;
+  --white: #fff;
+  --gray: #808185;
+  --gray-light: #f8f8f8;
+  --red: #ff6161;
+
+  // SIZES
+  --header-height: 265px;
+
+  // GUTTERS
+  --container-gutter: 0 80px;
+
+  @media screen and (max-width: 576px) {
+    --container-gutter: 0 20px;
+  }
+}

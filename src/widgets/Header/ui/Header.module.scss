@@ -1,0 +1,12 @@
+.header {
+  background-color: var(--violet);
+  min-height: var(--header-height);
+  color: var(--white);
+  padding: 32px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

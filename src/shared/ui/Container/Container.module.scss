@@ -1,7 +1,7 @@
 .container {
   max-width: 1440px;
   width: 100%;
-  padding: 0 40px;
+  padding: var(--container-gutter);
   margin: 0 auto;
   box-sizing: border-box;
 }

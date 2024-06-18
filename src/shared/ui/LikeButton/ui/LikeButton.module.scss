@@ -1,0 +1,30 @@
+.button {
+  border-radius: 4px;
+  width: 30px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--gray-light);
+  border: none;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    vertical-align: middle;
+    fill: var(--white);
+    stroke: var(--black);
+  }
+}
+
+.liked {
+  svg {
+    fill: var(--violet);
+    stroke: var(--violet);
+  }
+}
