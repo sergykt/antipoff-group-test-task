@@ -6,3 +6,7 @@ export type User = Camelize<UserRaw>;
 export type UserCardProps = Omit<User, 'email'>;
 
 export type UserList = Camelize<UserListResponse>;
+
+export interface UserState {
+  likes: Record<number, boolean>;
+}

@@ -1,6 +1,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   gap: 8px;
   font-size: var(--font-size-m);
@@ -13,7 +14,7 @@
   user-select: none;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   &:disabled {

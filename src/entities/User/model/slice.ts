@@ -1,10 +1,6 @@
 /* eslint-disable no-param-reassign */
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-
-interface UserState {
-  likes: Record<number, boolean>;
-}
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import { type UserState } from './types';
 
 const initialState: UserState = {
   likes: {},
