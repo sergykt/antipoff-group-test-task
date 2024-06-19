@@ -1,4 +1,5 @@
-import { memo, useCallback, useState } from 'react';
+import { Avatar } from '@/features/uploadAvatar';
+import { memo } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import { Header } from '@/widgets/Header';
 import { UserProfile } from '@/widgets/UserProfile';
@@ -19,42 +20,19 @@ const UserPage = memo(() => {
   const id = Number(params.id);
   const { data: userData, isFetching } = useGetUserByIdQuery(id);
 
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
-
-  const handleLoadImg = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      try {
-        const imageUrl = URL.createObjectURL(file);
-        setImageSrc(imageUrl);
-      } catch (error) {
-        console.error('Ошибка при создании изображения:', error);
-      }
-    }
-  }, []);
-
   return (
     <>
       <Header backUrl={backUrl}>
         {userData && (
           <div className={styles.wrapper}>
-            <div className={styles.imgWrapper}>
-              <img
-                src={imageSrc ?? userData.avatar}
-                alt={userData.firstName}
-                className={styles.img}
-                loading='lazy'
-                width='187'
-                height='187'
-              />
-              <input
-                type='file'
-                className={styles.inputFile}
-                title='Загрузить аватар'
-                accept='image/*'
-                onChange={handleLoadImg}
-              />
-            </div>
+            <Avatar
+              className={styles.img}
+              src={userData.avatar}
+              alt={userData.firstName}
+              width={187}
+              height={187}
+              loading='lazy'
+            />
             <div className={styles.info}>
               <h1 className={styles.title}>
                 {userData.firstName} {userData.lastName}
