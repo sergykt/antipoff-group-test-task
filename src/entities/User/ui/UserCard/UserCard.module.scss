@@ -22,6 +22,11 @@
   font-size: var(--font-size-l);
   box-shadow: 0 1px 4px 0 rgb(51 51 51 / 15%);
   background: var(--white);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 1px 10px 0 rgb(51 51 51 / 15%);
+  }
 }
 
 .img {
