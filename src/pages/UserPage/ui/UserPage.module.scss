@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+
+.title {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.img {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.info {
+  flex: 1 1 390px;
+}
+
+.subtitle {
+  font-size: var(--font-size-xl);
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    order: -1;
+    text-align: center;
+  }
+
+  .wrapper {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subtitle {
+    font-size: var(--font-size-l);
+  }
+}

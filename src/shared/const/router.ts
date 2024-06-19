@@ -2,6 +2,6 @@ export const appRoutes = {
   mainPage: '/',
   signUp: '/sign-up',
   login: '/login',
-  users: '/users:id',
+  users: '/users',
   notFound: '*',
 } as const;

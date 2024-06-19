@@ -8,5 +8,24 @@
 .controls {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 20px;
+}
+
+.logOut {
+  margin-left: auto;
+}
+
+.iconButton {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .iconButton {
+    display: block;
+  }
+
+  .button {
+    display: none;
+  }
 }

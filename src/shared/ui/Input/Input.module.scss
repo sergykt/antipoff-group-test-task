@@ -8,14 +8,14 @@
   display: inline-block;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-m);
   line-height: 1.36;
   color: var(--black);
   margin-bottom: 8px;
 }
 
 .input {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-m);
   background-color: var(--gray-light);
   border-radius: 8px;
   border: none;
@@ -37,5 +37,5 @@
   position: absolute;
   bottom: -28px;
   color: var(--red);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
 }

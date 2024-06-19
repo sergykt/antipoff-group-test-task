@@ -3,6 +3,7 @@ import { MainPage } from '@/pages/MainPage';
 import { appRoutes } from '@/shared/const/router';
 import { SignUpPage } from '@/pages/SignUpPage';
 import React from 'react';
+import { UserPage } from '@/pages/UserPage';
 
 interface RoutePropsWithAuth {
   path: string;
@@ -23,5 +24,10 @@ export const routeConfig: RoutePropsWithAuth[] = [
   {
     path: appRoutes.notFound,
     element: <Navigate to={appRoutes.mainPage} />,
+  },
+  {
+    path: `${appRoutes.users}/:id`,
+    element: <UserPage />,
+    authOnly: true,
   },
 ];

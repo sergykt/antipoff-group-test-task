@@ -19,8 +19,8 @@ const validationSchema = Yup.object({
   email: Yup.string().trim().required('Это обязательное поле').email('Неверный формат e-mail'),
   password: Yup.string()
     .required('Это обязательное поле')
-    .matches(/^\S*$/, 'Пробелы не допускаются')
-    .min(5, 'Минимальная длина пароля 5 символов'),
+    .matches(/^\S*$/, 'Недопустимые символы')
+    .min(5, 'Не менее 5 символов'),
   confirmPassword: Yup.string().oneOf([Yup.ref('password'), undefined], 'Пароли должны совпадать'),
 });
 

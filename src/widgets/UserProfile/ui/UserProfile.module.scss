@@ -1,0 +1,40 @@
+.content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.36;
+  gap: 1.36em;
+  max-width: 900px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .contacts {
+    order: -1;
+  }
+}
