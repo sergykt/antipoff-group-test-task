@@ -14,7 +14,7 @@ export const userApi = rtkApi.injectEndpoints({
     }),
     getUserById: build.query<User, number>({
       query: (id) => ({
-        url: `${routes.users}/${id}`,
+        url: `${routes.users}/${id}?delay=2`,
       }),
       transformResponse: (response: UserByIdResponse) => mapUser(response.data),
     }),

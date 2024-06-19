@@ -12,5 +12,5 @@ export const GuestGuard = ({ children }: GuestGuardProps) => {
 
   if (!token) return <Navigate to={appRoutes.signUp} replace />;
 
-  return <div>{children}</div>;
+  return children;
 };
