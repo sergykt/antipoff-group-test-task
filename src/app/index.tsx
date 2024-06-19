@@ -4,9 +4,9 @@ import { StoreProvider } from './providers/StoreProvider';
 import './styles/index.scss';
 
 export const App = () => (
-  <BrowserRouter>
-    <StoreProvider>
+  <StoreProvider>
+    <BrowserRouter>
       <AppRouter />
-    </StoreProvider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </StoreProvider>
 );
